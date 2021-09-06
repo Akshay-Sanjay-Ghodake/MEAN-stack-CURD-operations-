@@ -1,4 +1,4 @@
-starting installation
+starting installation for this app
 
 npm init
 
