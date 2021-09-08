@@ -7,3 +7,7 @@ npm install express --save
 npm install mongoose --save
 
 npm install body-parser --save
+
+
+front end
+npm install --save-dev @angular-devkit/build-angular
