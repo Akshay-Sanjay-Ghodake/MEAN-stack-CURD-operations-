@@ -1,13 +1,30 @@
 starting installation for this app
 
+---------------------------------------------------------------------------------
+
+Backend
+
+@ backend shell terminal
 npm init
-
 npm install express --save
-
 npm install mongoose --save
-
 npm install body-parser --save
 
+--------------------------------------------------------------------------------------
 
-front end
+Frontend
+
+@ frontend shell terminal
 npm install --save-dev @angular-devkit/build-angular
+
+to create app service @ front/src/app/appService  - file use for connection with url 
+ng g s servicename      
+i.e ng g s employee
+g = genrate s = service
+
+------------------------------------------------------------------------------------------
+
+start commands
+required 2 shell
+@ frontend shell terminal - ng serve 
+@ backend shell terminal - nodemon .\index.js

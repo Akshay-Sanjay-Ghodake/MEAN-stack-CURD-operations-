@@ -15,16 +15,22 @@
     <hr>
 
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4" *ngFor="let item of employees">
             <div class="card mb-3">
                 <div class="card-body">
-                    <a routerLink="employee/singleEmployee" class="card-title">Akshay</a>
-                    <h6 class="card-subtitle mb-2 text-muted">Frontend Developer</h6>
-                    <span class="badge badge-danger">Development</span>
+                    <a (click)="onEditEmployee(item)" class="card-title">{{item.name}}</a>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.position}}</h6>
+                    <span class="badge" [ngClass]="{
+                        'badge-success' : item.dept == 'Design',
+                        'badge-danger' : item.dept == 'Development',
+                        'badge-info' : item.dept == 'Testing'       
+                    }"
+                    >{{item.dept}}</span>
                     <hr>
                     <button type="button" class="btn btn-sm btn-outline-primary mr-2"
-                        (click)="onEditEmployee()">Edit</button>
-                    <button type="button" class="btn btn-sm btn-outline-danger">Delete
+                        (click)="onEditEmployee(item)">Edit</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger"
+                    (click)="onDeleteEmployee(item._id)">Delete
                     </button>
                 </div>
             </div>
@@ -63,6 +69,8 @@
                     <select class="custom-select" formControlName="dept">
                         <option value="Design">Design</option>
                         <option value="Development">Development</option>
+                        <option value="Testing">Testing</option>
+
                     </select>
                 </div>
             </div>

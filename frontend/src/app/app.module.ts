@@ -8,13 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeeComponent } from './employee/employee.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-//import { SingleEmployeeComponent } from './single-employee/single-employee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent
-
   ],
   imports: [
     BrowserModule,
